@@ -1,0 +1,355 @@
+{
+	"InstallStructureConfig": {
+		"InterfaceSection": {
+				"DebugMode": "OFF",
+				"pve_dyn_sql_interface_acc": "../shared/FR-MSSQL-Account",
+				"MappingFilePrefix":"NAO",
+				"MappingFileType":"xlsx"
+				"Timezone":"UTC",
+				"SourceFilePrefix":"planview_",
+				"SourceFileSuffix":"_actuals_nao",
+				"SourceFileType":"csv",
+				"SourceFileDelimeter":";",
+				"source_file_location":"file:////eft01-fr.frankfurt.planviewcloud.net/interfaces/GISINTDEV/QBE/IF03/NAO/DEV",
+			 "interface_settings_location":"file:////frdpvcapp05/Interfaces/QBESANDBOX3/qbe-03financialImportNAO"
+			},
+		"HeaderValidation":
+			{
+				"Headers":{
+				"Entity",
+				"Management Unit",
+				"Project Code",
+				"Planview SubCategory",
+				"Month",
+				"Year",
+				"Amount",
+				"Currency"
+			}
+			},
+			"InterfaceInputFields": {
+							 "Entity": {
+					"Validation": {
+						"maxLength": "12",
+						"truncate": "12"
+					},
+					"Alerts": {
+						"IF01_NAO_001": {
+							"AlertType": "WARNING",
+							"AlertClass": "Data Validation",
+							"AlertValidation": "checkLength",
+							"AlertMessage": "Entity value is greater than required length and has been truncated",
+							"StopLight": "GREEN",
+							"SummaryLog": "Number of data warnings"
+						}
+					}
+				},
+				"Management Unit": {
+					"Validation": {
+						"maxLength": "50",
+						"truncate": "50"
+					},
+					"Alerts": {
+						"IF01_NAO_002": {
+							"AlertType": "ERROR",
+							"AlertClass": "Data Validation",
+							"AlertValidation": "checkIfEmpty",
+							"AlertMessage": "Mandatory field Management Unit is not provided",
+							"StopLight": "AMBER",
+							"SummaryLog": "Number of data errors"
+						},
+						"IF01_NAO_003": {
+							"AlertType": "WARNING",
+							"AlertClass": "Data Validation",
+							"AlertValidation": "checkLength",
+							"AlertMessage": "Management Unit value is greater than required length and has been truncated",
+							"StopLight": "GREEN",
+							"SummaryLog": "Number of data warnings"
+						}
+					}
+					},
+					"Planview SubCategory": {
+					"Validation": {
+						"maxLength": "50",
+						"truncate": "50"
+					},
+					"Alerts": {
+						"IF01_NAO_004": {
+							"AlertType": "ERROR",
+							"AlertClass": "Data Validation",
+							"AlertValidation": "checkIfEmpty",
+							"AlertMessage": "Mandatory field Planview SubCategory is not provided",
+							"StopLight": "AMBER",
+							"SummaryLog": "Number of data errors"
+						},
+						"IF01_NAO_005": {
+							"AlertType": "WARNING",
+							"AlertClass": "Data Validation",
+							"AlertValidation": "checkLength",
+							"AlertMessage": "Planview SubCategory value is greater than required length and has been truncated",
+							"StopLight": "GREEN",
+							"SummaryLog": "Number of data warnings"
+						}
+					}
+					},
+					"Management Unit": {
+					"Validation": {
+						"maxLength": "50",
+						"truncate": "50"
+					},
+					"Alerts": {
+						"IF01_NAO_006": {
+							"AlertType": "ERROR",
+							"AlertClass": "Data Validation",
+							"AlertValidation": "checkIfEmpty",
+							"AlertMessage": "Mandatory field Management Unit is not provided",
+							"StopLight": "AMBER",
+							"SummaryLog": "Number of data errors"
+						},
+						"IF01_NAO_007": {
+							"AlertType": "WARNING",
+							"AlertClass": "Data Validation",
+							"AlertValidation": "checkLength",
+							"AlertMessage": "Management Unit value is greater than required length and has been truncated",
+							"StopLight": "GREEN",
+							"SummaryLog": "Number of data warnings"
+						}
+					}
+					},
+					"Month": {
+					"Validation": {
+						"maxLength": "50",
+						"truncate": "50"
+					},
+					"Alerts": {
+						"IF01_NAO_008": {
+							"AlertType": "ERROR",
+							"AlertClass": "Data Validation",
+							"AlertValidation": "checkIfEmpty",
+							"AlertMessage": "Mandatory field Management Unit is not provided",
+							"StopLight": "AMBER",
+							"SummaryLog": "Number of data errors"
+						},
+						"IF01_NAO_009": {
+							"AlertType": "WARNING",
+							"AlertClass": "Data Validation",
+							"AlertValidation": "checkLength",
+							"AlertMessage": "Management Unit value is greater than required length and has been truncated",
+							"StopLight": "GREEN",
+							"SummaryLog": "Number of data warnings"
+						}
+					}
+					},
+					"Amount": {
+					"Validation": {
+						"maxLength": "13",
+						"truncate": "13"
+					},
+					"Alerts": {
+						"IF01_NAO_012": {
+							"AlertType": "ERROR",
+							"AlertClass": "Data Validation",
+							"AlertValidation": "checkIfEmpty",
+							"AlertMessage": "Mandatory field Amount is not provided",
+							"StopLight": "AMBER",
+							"SummaryLog": "Number of data errors"
+						},
+						"IF01_NAO_013": {
+							"AlertType": "WARNING",
+							"AlertClass": "Data Validation",
+							"AlertValidation": "checkLength",
+							"AlertMessage": "Amount value is greater than required length and has been truncated",
+							"StopLight": "GREEN",
+							"SummaryLog": "Number of data warnings"
+						},
+					}
+					},
+					"Currency": {
+					"Validation": {
+						"maxLength": "50",
+						"truncate": "50"
+					},
+					"Alerts": {
+						"IF01_NAO_014": {
+							"AlertType": "ERROR",
+							"AlertClass": "Data Validation",
+							"AlertValidation": "checkIfEmpty",
+							"AlertMessage": "Mandatory field Currency is not provided",
+							"StopLight": "AMBER",
+							"SummaryLog": "Number of data errors"
+						},
+						"IF01_NAO_015": {
+							"AlertType": "WARNING",
+							"AlertClass": "Data Validation",
+							"AlertValidation": "checkLength",
+							"AlertMessage": "Currency value is greater than required length and has been truncated",
+							"StopLight": "GREEN",
+							"SummaryLog": "Number of data warnings"
+						}
+					}
+					}
+			},
+			"AlternateStructures": {
+				"WorkStatus": {
+					"AltStructure": "Wbs20",
+					"PrimStructure": "$Plan",
+					"AltType": "S"
+				},
+				"RequesterPriority": {
+					"AltStructure": "Wbs25",
+					"PrimStructure": "$Plan",
+					"AltType": "S"
+				},
+				"MultiSelectDemo": {
+					"AltStructure": "Wbs190",
+					"PrimStructure": "$Plan",
+					"AltType": "M"
+				},
+				"Project Manager": {
+					"AltStructure": "LfCycRole",
+					"StructureCode": "2268"
+				}
+			},
+			"CustomFields": {
+				"Business_Need": {
+					"FieldID": "PE02",
+					"PrimStructure": "$Plan",
+					"FieldType": "L"
+				},
+				"PreliminaryScore": {
+					"FieldID": "score3",
+					"PrimStructure": "$Plan",
+					"FieldType": "N",
+					"FieldFormat": "20.2"
+				}
+			}
+		},
+		"CustomErrors": {},
+		"Components": {
+		"LoggingComponent": "utils v1/alertLogging",
+				"Initialize": "initialize v1/initialize",
+				"Finalize": "finalize v2/finalize",
+				"DynamicValidator": "dynamicValidator v1/validateDataDynamic",
+				"FinancialUpsert": "financialUpsert v2/main_financialUpsert"
+		},
+		"LoggingSection": {
+			"ProcessLogPrefix": "QBE_IF03_NAO_ProcessLog_",
+			"ZipThreshold": "50",
+			"SourceDataFileArchive": "True",
+			"LogRetentionDays": "30",
+			"DataRetentionDays": "30",
+			"Timezone": "CET",
+			"SummaryLogPrefix": "QBE_IF03_NAO_SummaryLog_",
+			"SummaryLogOverview": {
+				"DataSummary": {
+					"SectionName": "Data Summary",
+					"MessageSequence": {
+						"AllRecords": "Number of project records",
+						"ErrorRecords": "Number of records with error",
+						"ProcessedRecords": "Number of records exported"
+					}
+				},
+				"BatchSummary": {
+					"SectionName": "",
+					"MessageSequence": []
+				},
+				"MasterSummary": {
+					"SectionName": "Error Summary",
+					"MessageSequence": [
+						"DataValidationErrors",
+						"DataValidationWarnings"
+					]
+				}
+			},
+			"SummaryLogConfigurableTabs": {
+				"SourceTab1": {
+					"TabName": "Source Data",
+					"TabSource": "pi_QBE_if03_NAO_data_staging",
+					"TabIncludeColumns": [
+					        "Entity",
+							"Management Unit",
+							"Project Code",
+				            "Planview SubCategory",
+				            "Month",
+			                "Year",
+			                "Amount",
+			                "Currency"
+					]
+				},
+				"CustomTab2": {
+					"TabName": "",
+					"TabSource": "",
+					"TabIncludeColumns": [
+						"*"
+					]
+				},
+				"CustomTab3": {
+					"TabName": "",
+					"TabSource": "",
+					"TabIncludeColumns": [
+						""
+					]
+				},
+				"CustomTab4": {
+					"TabName": "",
+					"TabSource": "",
+					"TabIncludeColumns": [
+						""
+					]
+				},
+				"CustomTab5": {
+					"TabName": "",
+					"TabSource": "",
+					"TabIncludeColumns": [
+						""
+					]
+				}
+			},
+			"TransLogPrefix": "QBE_IF03_NAO_ServiceLog_",
+			"TransLogType": "xlsx",
+			"TransLogSource": "QBE_IF03_NAO_transactions",
+			"ErrorLogPrefix": "QBE_IF03_NAO_ErrorLog_",
+			"ErrorLogType": "csv",
+			"ErrorLogSource": "QBE_IF03_NAO_errors"
+		},
+		"EmailSection": {
+			"IsSendEmail": "false",
+			"AttachLogs": "false",
+			"SmtpTo": "saurabh.sigh@Planview.com",
+			"SmtpFrom": "noreply@planview.com"
+		}
+	},
+	"ConfigurationCheck": {
+		"FmConfigCheck": {},
+		"SnapLogicConfiguration": {
+			"Accounts": [],
+			"Tasks": [
+				{
+					"TaskName": "EXECUTE_Z_training_saurabh_Task"
+				}
+			]
+		},
+		"MappingData": {
+			"TablesToCheck": []
+		},
+		"WebService": {
+			"Web_Services_Used": []
+		}
+	},
+	"JobStreamConfig": {
+		"JobStream": [
+			{
+				"Name": "POC IF1 Project Export",
+				"Path": "EXECUTE_Z_training_saurabh.bat"
+			},
+			{
+				"Name": "POC IF1 Installation",
+				"Path": "Execute-Install.bat"
+			},
+			{
+				"Name": "POC IF1 Config Checks",
+				"Path": "Execute-ConfigCheck.bat"
+			}
+		]
+	}
+}
+
