@@ -1,3 +1,4 @@
+
 {
 	"InstallStructureConfig": {
 		"InterfaceSection": {
@@ -5,7 +6,7 @@
 			},
 		"HeaderValidation":
 			{
-				"Headers":{
+				"Headers":[
 				"Entity",
 				"Management Unit",
 				"Project Code",
@@ -14,7 +15,7 @@
 				"Year",
 				"Amount",
 				"Currency"
-			}
+				]
 			},
 			"InterfaceInputFields": {
 							 "Entity": {
@@ -211,9 +212,8 @@
 					"FieldType": "N",
 					"FieldFormat": "20.2"
 				}
-			}
-		},
-		"CustomErrors": {},
+			},
+			"CustomErrors": {},
 		"Components": {
 		"LoggingComponent": "utils v1/alertLogging",
 				"Initialize": "initialize v1/initialize",
@@ -307,7 +307,7 @@
 			"SmtpTo": "saurabh.sigh@Planview.com",
 			"SmtpFrom": "noreply@planview.com"
 		}
-	},
+	}
 	"ConfigurationCheck": {
 		"FmConfigCheck": {},
 		"SnapLogicConfiguration": {
