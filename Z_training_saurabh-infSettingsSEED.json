@@ -339,7 +339,7 @@
 		"JobStream": [
 			{
 				"Name": "POC IF1 Project Export",
-				"Path": "EXECUTE_Z_training_saurabh.bat"
+				"Path": "EXECUTE-Z_training_saurabh.bat"
 			},
 			{
 				"Name": "POC IF1 Installation",
@@ -352,4 +352,5 @@
 		]
 	}
 }
+
 
