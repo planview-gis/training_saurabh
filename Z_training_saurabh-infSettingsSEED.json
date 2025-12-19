@@ -210,11 +210,10 @@
 		},
 		"CustomErrors": {},
 		"Components": {
-			"LoggingComponent": "utils v1/alertLogging",
-			"Initialize": "initialize v1/initialize",
-			"Finalize": "finalize v2/finalize",
-			"DynamicValidator": "dynamicValidator v1/validateDataDynamic",
-			"FinancialUpsert": "financialUpsert v2/main_financialUpsert"
+	  "Finalize": "finalize v2/finalize",
+      "LoggingComponent": "utils v1/alertLogging",
+      "DynamicValidator": "dynamicValidator v1/validateDataDynamic v1.1",
+      "ExecuteSQL": "utils v1/executeSQL"
 		},
 		"LoggingSection": {
 			"ProcessLogPrefix": "QBE_IF03_NAO_ProcessLog_",
@@ -320,4 +319,5 @@
 		"JobStream": []
 	}
 }
+
 
