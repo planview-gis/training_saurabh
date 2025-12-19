@@ -1,18 +1,15 @@
 {
 	"InstallStructureConfig": {
 		"InterfaceSection": {
-			"DebugMode": "OFF"
+			"DebugMode": "OFF",
+			   "SourceFilePrefix":"IF05_",
+				"SourceFileType":"xlsx"
 		},
 		"HeaderValidation": {
 			"Headers": [
-				"Entity",
-				"Management Unit",
-				"Project Code",
-				"Planview SubCategory",
-				"Month",
-				"Year",
-				"Amount",
-				"Currency"
+	           "CUTOFF_TO_BE",
+	           "ON_OR_AFTER",
+			   "BEFORE_OR_UNTIL"
 			]
 		},
 		"InterfaceInputFields": {
@@ -323,3 +320,4 @@
 		"JobStream": []
 	}
 }
+
