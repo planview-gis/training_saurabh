@@ -82,7 +82,7 @@
           }
         }
       }
-    }
+    },
 		"AlternateStructures": {
 			"WorkStatus": {
 				"AltStructure": "Wbs20",
@@ -228,6 +228,7 @@
 		"JobStream": []
 	}
 }
+
 
 
 
