@@ -12,168 +12,77 @@
 			   "BEFORE_OR_UNTIL"
 			]
 		},
-		"InterfaceInputFields": {
-			"Entity": {
-				"Validation": {
-					"maxLength": "12",
-					"truncate": "12"
-				},
-				"Alerts": {
-					"IF01_NAO_001": {
-						"AlertType": "WARNING",
-						"AlertClass": "Data Validation",
-						"AlertValidation": "checkLength",
-						"AlertMessage": "Entity value is greater than required length and has been truncated",
-						"StopLight": "GREEN",
-						"SummaryLog": "Number of data warnings"
-					}
-				}
-			},
-			"Management Unit": {
-				"Validation": {
-					"maxLength": "50",
-					"truncate": "50"
-				},
-				"Alerts": {
-					"IF01_NAO_002": {
-						"AlertType": "ERROR",
-						"AlertClass": "Data Validation",
-						"AlertValidation": "checkIfEmpty",
-						"AlertMessage": "Mandatory field Management Unit is not provided",
-						"StopLight": "AMBER",
-						"SummaryLog": "Number of data errors"
-					},
-					"IF01_NAO_003": {
-						"AlertType": "WARNING",
-						"AlertClass": "Data Validation",
-						"AlertValidation": "checkLength",
-						"AlertMessage": "Management Unit value is greater than required length and has been truncated",
-						"StopLight": "GREEN",
-						"SummaryLog": "Number of data warnings"
-					}
-				}
-			},
-			"Planview SubCategory": {
-				"Validation": {
-					"maxLength": "50",
-					"truncate": "50"
-				},
-				"Alerts": {
-					"IF01_NAO_004": {
-						"AlertType": "ERROR",
-						"AlertClass": "Data Validation",
-						"AlertValidation": "checkIfEmpty",
-						"AlertMessage": "Mandatory field Planview SubCategory is not provided",
-						"StopLight": "AMBER",
-						"SummaryLog": "Number of data errors"
-					},
-					"IF01_NAO_005": {
-						"AlertType": "WARNING",
-						"AlertClass": "Data Validation",
-						"AlertValidation": "checkLength",
-						"AlertMessage": "Planview SubCategory value is greater than required length and has been truncated",
-						"StopLight": "GREEN",
-						"SummaryLog": "Number of data warnings"
-					}
-				}
-			},
-			"Management Unit": {
-				"Validation": {
-					"maxLength": "50",
-					"truncate": "50"
-				},
-				"Alerts": {
-					"IF01_NAO_006": {
-						"AlertType": "ERROR",
-						"AlertClass": "Data Validation",
-						"AlertValidation": "checkIfEmpty",
-						"AlertMessage": "Mandatory field Management Unit is not provided",
-						"StopLight": "AMBER",
-						"SummaryLog": "Number of data errors"
-					},
-					"IF01_NAO_007": {
-						"AlertType": "WARNING",
-						"AlertClass": "Data Validation",
-						"AlertValidation": "checkLength",
-						"AlertMessage": "Management Unit value is greater than required length and has been truncated",
-						"StopLight": "GREEN",
-						"SummaryLog": "Number of data warnings"
-					}
-				}
-			},
-			"Month": {
-				"Validation": {
-					"maxLength": "50",
-					"truncate": "50"
-				},
-				"Alerts": {
-					"IF01_NAO_008": {
-						"AlertType": "ERROR",
-						"AlertClass": "Data Validation",
-						"AlertValidation": "checkIfEmpty",
-						"AlertMessage": "Mandatory field Management Unit is not provided",
-						"StopLight": "AMBER",
-						"SummaryLog": "Number of data errors"
-					},
-					"IF01_NAO_009": {
-						"AlertType": "WARNING",
-						"AlertClass": "Data Validation",
-						"AlertValidation": "checkLength",
-						"AlertMessage": "Management Unit value is greater than required length and has been truncated",
-						"StopLight": "GREEN",
-						"SummaryLog": "Number of data warnings"
-					}
-				}
-			},
-			"Amount": {
-				"Validation": {
-					"maxLength": "13",
-					"truncate": "13"
-				},
-				"Alerts": {
-					"IF01_NAO_012": {
-						"AlertType": "ERROR",
-						"AlertClass": "Data Validation",
-						"AlertValidation": "checkIfEmpty",
-						"AlertMessage": "Mandatory field Amount is not provided",
-						"StopLight": "AMBER",
-						"SummaryLog": "Number of data errors"
-					},
-					"IF01_NAO_013": {
-						"AlertType": "WARNING",
-						"AlertClass": "Data Validation",
-						"AlertValidation": "checkLength",
-						"AlertMessage": "Amount value is greater than required length and has been truncated",
-						"StopLight": "GREEN",
-						"SummaryLog": "Number of data warnings"
-					}
-				}
-			},
-			"Currency": {
-				"Validation": {
-					"maxLength": "50",
-					"truncate": "50"
-				},
-				"Alerts": {
-					"IF01_NAO_014": {
-						"AlertType": "ERROR",
-						"AlertClass": "Data Validation",
-						"AlertValidation": "checkIfEmpty",
-						"AlertMessage": "Mandatory field Currency is not provided",
-						"StopLight": "AMBER",
-						"SummaryLog": "Number of data errors"
-					},
-					"IF01_NAO_015": {
-						"AlertType": "WARNING",
-						"AlertClass": "Data Validation",
-						"AlertValidation": "checkLength",
-						"AlertMessage": "Currency value is greater than required length and has been truncated",
-						"StopLight": "GREEN",
-						"SummaryLog": "Number of data warnings"
-					}
-				}
-			}
-		},
+		 "InterfaceInputFields": {
+      "CUTOFF_TO_BE": {
+        "Validation": {
+          "dateFormat": "yyyy-MM-dd"
+        }, 
+        "Alerts": {
+          "IF05_101": {
+            "AlertType": "ERROR",
+            "AlertClass": "Data Validation",
+            "AlertValidation": "checkIfEmpty",
+            "AlertMessage": "CUTOFF_TO_BE is mandatory, correct the excel file, place in RBC FTP and rerun",
+            "StopLight": "RED",
+            "SummaryLog": "Critical error"
+          },
+          "IF05_102": {
+            "AlertType": "ERROR",
+            "AlertClass": "Data Validation",
+            "AlertValidation": "checkIfDateN",
+            "AlertMessage": "CUTOFF_TO_BE should be in yyyy-mm-dd format. Update the source file and rerun the integration.",
+            "StopLight": "RED",
+            "SummaryLog": "Critical error"
+          }
+        }
+      },
+      "ON_OR_AFTER": {
+        "Validation": {
+          "dateFormat": "yyyy-MM-dd"
+        },
+        "Alerts": {
+          "IF05_103": {
+            "AlertType": "ERROR",
+            "AlertClass": "Data Validation",
+            "AlertValidation": "checkIfEmpty",
+            "AlertMessage": "ON_OR_AFTER is mandatory, correct the excel file, place in RBC FTP and rerun",
+            "StopLight": "RED",
+            "SummaryLog": "Critical error"
+          },
+          "IF05_104": {
+            "AlertType": "ERROR",
+            "AlertClass": "Data Validation",
+            "AlertValidation": "checkIfDateN",
+            "AlertMessage": "ON_OR_AFTER should be in yyyy-mm-dd format. Update the source file and rerun the integration.",
+            "StopLight": "RED",
+            "SummaryLog": "Critical error"
+          }
+        }
+      },
+      "BEFORE_OR_UNTIL": {
+        "Validation": {
+          "dateFormat": "yyyy-MM-dd"
+        },
+        "Alerts": {
+          "IF05_112": {
+            "AlertType": "ERROR",
+            "AlertClass": "Data Validation",
+            "AlertValidation": "checkIfEmpty",
+            "AlertMessage": "BEFORE_OR_UNTIL is mandatory, correct the excel file, place in RBC FTP and rerun",
+            "StopLight": "RED",
+            "SummaryLog": "Critical error"
+          },
+          "IF05_113": {
+            "AlertType": "ERROR",
+            "AlertClass": "Data Validation",
+            "AlertValidation": "checkIfDateN",
+            "AlertMessage": "BEFORE_OR_UNTIL should be in yyyy-mm-dd format. Update the source file and rerun the integration.",
+            "StopLight": "RED",
+            "SummaryLog": "Critical error"
+          }
+        }
+      }
+    }
 		"AlternateStructures": {
 			"WorkStatus": {
 				"AltStructure": "Wbs20",
@@ -319,5 +228,6 @@
 		"JobStream": []
 	}
 }
+
 
 
