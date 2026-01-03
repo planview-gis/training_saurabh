@@ -83,6 +83,97 @@
         }
       }
     },
+	 "CustomErrors": {
+      "IF05_F_101": {
+        "AlertType": "ERROR",
+        "AlertClass": "Process Log",
+        "AlertValidation": "custom",
+        "AlertMessage": "Critical Error: No source file found.",
+        "StopLight": "RED",
+        "SummaryLog": "Critical Error"
+      },
+      "IF05_F_102": {
+        "AlertType": "ERROR",
+        "AlertClass": "Process Log",
+        "AlertValidation": "custom",
+        "AlertMessage": "Excel file headers not as expected, correct the excel file, place in RBC FTP and rerun.",
+        "StopLight": "RED",
+        "SummaryLog": "Critical Error"
+      },
+      "IF05_SD_101": {
+        "AlertType": "ERROR",
+        "AlertClass": "Process Log",
+        "AlertValidation": "custom",
+        "AlertMessage": "No record for the current month or next month. Correct the excel file, place in RBC FTP and rerun.",
+        "StopLight": "RED",
+        "SummaryLog": "Critical Error"
+      },
+      "IF05_SD_102": {
+        "AlertType": "ERROR",
+        "AlertClass": "Process Log",
+        "AlertValidation": "custom",
+        "AlertMessage": "Duplicate dates Data is Present; Update the source file and rerun the integration.",
+        "StopLight": "RED",
+        "SummaryLog": "Critical Error"
+      },
+      "IF05_SD_103": {
+        "AlertType": "ERROR",
+        "AlertClass": "Process Log",
+        "AlertValidation": "custom",
+        "AlertMessage": "error while reading the data from source ftp=> ",
+        "StopLight": "RED",
+        "SummaryLog": "error while reading the data from source ftp"
+      },
+        "IF05_DB_101": {
+        "AlertType": "ERROR",
+        "AlertClass": "Process Log",
+        "AlertValidation": "custom",
+        "AlertMessage": "error while loding the data into staging tables=> ",
+        "StopLight": "RED",
+        "SummaryLog": "error while loding the data into staging tables"
+      },
+	   "IF05_DB_102": {
+        "AlertType": "ERROR",
+        "AlertClass": "Process Log",
+        "AlertValidation": "custom",
+        "AlertMessage": "error while reading the data from staging tables=> ",
+        "StopLight": "RED",
+        "SummaryLog": "error while reading the data from staging tables"
+      },
+        "IF05_DB_103": {
+        "AlertType": "ERROR",
+        "AlertClass": "Process Log",
+        "AlertValidation": "custom",
+        "AlertMessage": "error while loding the data into temp tables=> ",
+        "StopLight": "RED",
+        "SummaryLog": "error while loding the data into temo tables"
+      },
+	   "IF05_DB_104": {
+        "AlertType": "ERROR",
+        "AlertClass": "Process Log",
+        "AlertValidation": "custom",
+        "AlertMessage": "error while reading the data from temp tables=> ",
+        "StopLight": "RED",
+        "SummaryLog": "error while reading the data from temp tables"
+      },
+	  "IF05_SD_104": {
+        "AlertType": "ERROR",
+        "AlertClass": "Process Log",
+        "AlertValidation": "custom",
+        "AlertMessage": "Record dates are incorrect. Update the source file and rerun the integration.",
+        "StopLight": "RED",
+        "SummaryLog": "Record dates are incorrect."
+      },
+	  "IF05_DB_105":
+	  { 
+		"AlertType": "Success",
+        "AlertClass": "Process Log",
+        "AlertValidation": "custom",
+        "AlertMessage": "Cutt of Date is successfully Updated=>",
+        "StopLight": "Green",
+        "SummaryLog": "Cutt of Date is successfully Updated"
+	  }
+    },
 		"AlternateStructures": {
 			"WorkStatus": {
 				"AltStructure": "Wbs20",
@@ -117,7 +208,6 @@
 				"FieldFormat": "20.2"
 			}
 		},
-		"CustomErrors": {},
 		"Components": {
 	  "Finalize": "finalize v2/finalize",
       "LoggingComponent": "utils v1/alertLogging",
@@ -228,7 +318,6 @@
 		"JobStream": []
 	}
 }
-
 
 
 
