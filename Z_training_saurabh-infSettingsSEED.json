@@ -287,12 +287,12 @@
 					]
 				}
 			},
-			"TransLogPrefix": "QBE_IF03_NAO_ServiceLog_",
+			"TransLogPrefix": "RBC_IF05_Cuttoff_Transaction",
 			"TransLogType": "xlsx",
-			"TransLogSource": "QBE_IF03_NAO_transactions",
-			"ErrorLogPrefix": "QBE_IF03_NAO_ErrorLog_",
+			"TransLogSource": "RBC_IF05_Cuttoff_transactions_",
+			"ErrorLogPrefix": "RBC_IF05_Cuttoff_error_log_",
 			"ErrorLogType": "csv",
-			"ErrorLogSource": "QBE_IF03_NAO_errors"
+			"ErrorLogSource": "RBC_IF05_Cuttoff_Transaction_errors"
 		},
 		"EmailSection": {
 			"IsSendEmail": "false",
@@ -318,6 +318,7 @@
 		"JobStream": []
 	}
 }
+
 
 
 
